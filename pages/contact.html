@@ -1,826 +1,922 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact Us - Startup Barishal</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        :root {
-            --color-background: #ffffff;
-            --color-on-background: #191c1d;
-            --color-primary: #ff6b00;
-            --color-on-primary: #ffffff;
-            --color-primary-container: #e65c00;
-            --color-primary-fixed: #ffdbcc;
-            --color-secondary: #065ca9;
-            --color-surface: #ffffff;
-            --color-surface-dim: #d8dada;
-            --color-on-surface: #191c1d;
-            --color-on-surface-variant: #414751;
-            --color-surface-container-lowest: #ffffff;
-            --color-surface-container-low: #f2f4f4;
-            --color-surface-subtle: #F8FAFC;
-            --color-outline-variant: #c1c6d3;
-            --color-error: #ba1a1a;
-            --color-glass-border: rgba(6, 92, 169, 0.08);
-            --color-inverse-surface: #2e3131;
-            
-            --spacing-container-max: 1280px;
-            --spacing-margin-desktop: 64px;
-            --spacing-margin-mobile: 20px;
-            --spacing-gutter: 24px;
-            --spacing-stack-sm: 8px;
-            --spacing-stack-md: 16px;
-            --spacing-stack-lg: 32px;
-            --spacing-section-padding: 80px;
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - Startup Barishal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-background: #ffffff;
+        --color-on-background: #191c1d;
+        --color-primary: #ff6b00;
+        --color-on-primary: #ffffff;
+        --color-primary-container: #e65c00;
+        --color-primary-fixed: #ffdbcc;
+        --color-secondary: #065ca9;
+        --color-surface: #ffffff;
+        --color-surface-dim: #d8dada;
+        --color-on-surface: #191c1d;
+        --color-on-surface-variant: #414751;
+        --color-surface-container-lowest: #ffffff;
+        --color-surface-container-low: #f2f4f4;
+        --color-surface-subtle: #f8fafc;
+        --color-outline-variant: #c1c6d3;
+        --color-error: #ba1a1a;
+        --color-glass-border: rgba(6, 92, 169, 0.08);
+        --color-inverse-surface: #2e3131;
 
-            --font-family: 'Inter', sans-serif;
-        }
+        --spacing-container-max: 1280px;
+        --spacing-margin-desktop: 64px;
+        --spacing-margin-mobile: 20px;
+        --spacing-gutter: 24px;
+        --spacing-stack-sm: 8px;
+        --spacing-stack-md: 16px;
+        --spacing-stack-lg: 32px;
+        --spacing-section-padding: 80px;
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        --font-family: "Inter", sans-serif;
 
-        body {
-            background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,247,250,1) 100%);
-            position: relative;
-            color: var(--color-on-background);
-            font-family: var(--font-family);
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+        --radius-xl: 1.2rem;
+      }
 
-        /* Subtle texture overlay */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0.4;
-            background-image: radial-gradient(var(--color-surface-dim) 1px, transparent 1px);
-            background-size: 24px 24px;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+      body {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(245, 247, 250, 1) 100%
+        );
+        position: relative;
+        color: var(--color-on-background);
+        font-family: var(--font-family);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-        ul {
-            list-style: none;
-        }
+      /* Subtle texture overlay */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.4;
+        background-image: radial-gradient(
+          var(--color-surface-dim) 1px,
+          transparent 1px
+        );
+        background-size: 24px 24px;
+      }
 
-        button, input, select, textarea {
-            font-family: inherit;
-            border: none;
-            background: none;
-        }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+      ul {
+        list-style: none;
+      }
 
-        /* Top Navigation */
+      button,
+      input,
+      select,
+      textarea {
+        font-family: inherit;
+        border: none;
+        background: none;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      /* Top Navigation */
+      .top-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 50;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--color-glass-border);
+        transition: all 0.3s ease-in-out;
+        display: none;
+      }
+
+      @media (min-width: 768px) {
         .top-nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 50;
-            background-color: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--color-glass-border);
-            transition: all 0.3s ease-in-out;
-            display: none;
+          display: block;
         }
+      }
 
-        @media (min-width: 768px) {
-            .top-nav {
-                display: block;
-            }
-        }
+      .nav-container {
+        max-width: var(--spacing-container-max);
+        margin: 0 auto;
+        padding: 0 var(--spacing-margin-desktop);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
 
-        .nav-container {
-            max-width: var(--spacing-container-max);
-            margin: 0 auto;
-            padding: 0 var(--spacing-margin-desktop);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
+      .brand-logo img {
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+      }
 
-        .brand-logo img {
-            height: 48px;
-            width: auto;
-            object-fit: contain;
-        }
+      .nav-content {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-gutter);
+      }
 
-        .nav-content {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-gutter);
-        }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-stack-md);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-stack-md);
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-        }
+      .nav-links a {
+        color: var(--color-on-surface-variant);
+        transition: color 0.2s;
+      }
 
-        .nav-links a {
-            color: var(--color-on-surface-variant);
-            transition: color 0.2s;
-        }
+      .nav-links a:hover {
+        color: var(--color-primary);
+      }
 
-        .nav-links a:hover {
-            color: var(--color-primary);
-        }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-stack-sm);
+      }
 
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-stack-sm);
-        }
+      .btn {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 8px 16px;
+        border-radius: var(--radius-xl);
+        cursor: pointer;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
 
-        .btn {
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            padding: 8px 16px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
+      .btn-outline {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+      }
 
-        .btn-outline {
-            border: 1px solid var(--color-primary);
-            color: var(--color-primary);
-        }
+      .btn-outline:hover {
+        background-color: rgba(255, 107, 0, 0.05);
+      }
 
-        .btn-outline:hover {
-            background-color: rgba(255, 107, 0, 0.05);
-        }
+      .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-on-primary);
+      }
 
-        .btn-primary {
-            background-color: var(--color-primary);
-            color: var(--color-on-primary);
-        }
+      .btn-primary:hover {
+        background-color: var(--color-primary-container);
+      }
 
-        .btn-primary:hover {
-            background-color: var(--color-primary-container);
-        }
+      /* Mobile Header */
+      .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--spacing-margin-mobile);
+        height: 64px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--color-glass-border);
+        position: sticky;
+        top: 0;
+        z-index: 40;
+      }
 
-        /* Mobile Header */
+      @media (min-width: 768px) {
         .mobile-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 var(--spacing-margin-mobile);
-            height: 64px;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--color-glass-border);
-            position: sticky;
-            top: 0;
-            z-index: 40;
+          display: none;
         }
+      }
 
-        @media (min-width: 768px) {
-            .mobile-header {
-                display: none;
-            }
-        }
+      .mobile-header .brand-logo img {
+        height: 40px;
+      }
 
-        .mobile-header .brand-logo img {
-            height: 40px;
-        }
+      .menu-toggle {
+        color: var(--color-on-surface-variant);
+        cursor: pointer;
+      }
 
-        .menu-toggle {
-            color: var(--color-on-surface-variant);
-            cursor: pointer;
-        }
+      /* Main Content */
+      main {
+        flex-grow: 1;
+        padding-top: 96px;
+        padding-bottom: var(--spacing-section-padding);
+      }
 
-        /* Main Content */
+      @media (min-width: 768px) {
         main {
-            flex-grow: 1;
-            padding-top: 96px;
-            padding-bottom: var(--spacing-section-padding);
+          padding-top: 128px;
         }
+      }
 
-        @media (min-width: 768px) {
-            main {
-                padding-top: 128px;
-            }
-        }
+      /* Hero Section */
+      .hero {
+        max-width: var(--spacing-container-max);
+        margin: 0 auto;
+        padding: 0 var(--spacing-margin-mobile);
+        margin-bottom: var(--spacing-stack-lg);
+        text-align: center;
+      }
 
-        /* Hero Section */
+      @media (min-width: 768px) {
         .hero {
-            max-width: var(--spacing-container-max);
-            margin: 0 auto;
-            padding: 0 var(--spacing-margin-mobile);
-            margin-bottom: var(--spacing-stack-lg);
-            text-align: center;
+          padding: 0 var(--spacing-margin-desktop);
+          text-align: left;
         }
+      }
 
-        @media (min-width: 768px) {
-            .hero {
-                padding: 0 var(--spacing-margin-desktop);
-                text-align: left;
-            }
-        }
+      .hero-content {
+        max-width: 42rem;
+      }
 
-        .hero-content {
-            max-width: 42rem;
-        }
+      .hero-title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-stack-sm);
+      }
 
+      @media (min-width: 768px) {
         .hero-title {
-            font-size: 36px;
-            line-height: 44px;
-            letter-spacing: -0.02em;
-            font-weight: 700;
-            color: var(--color-secondary);
-            margin-bottom: var(--spacing-stack-sm);
+          font-size: 48px;
+          line-height: 56px;
         }
+      }
 
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 48px;
-                line-height: 56px;
-            }
-        }
+      .hero-desc {
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--color-on-surface-variant);
+      }
 
-        .hero-desc {
-            font-size: 18px;
-            line-height: 28px;
-            color: var(--color-on-surface-variant);
-        }
+      /* Contact Section */
+      .contact-grid {
+        max-width: var(--spacing-container-max);
+        margin: 0 auto;
+        padding: 0 var(--spacing-margin-mobile);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-gutter);
+      }
 
-        /* Contact Section */
+      @media (min-width: 768px) {
         .contact-grid {
-            max-width: var(--spacing-container-max);
-            margin: 0 auto;
-            padding: 0 var(--spacing-margin-mobile);
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-gutter);
+          padding: 0 var(--spacing-margin-desktop);
         }
+      }
 
-        @media (min-width: 768px) {
-            .contact-grid {
-                padding: 0 var(--spacing-margin-desktop);
-            }
+      @media (min-width: 1024px) {
+        .contact-grid {
+          grid-template-columns: 7fr 5fr;
         }
+      }
 
-        @media (min-width: 1024px) {
-            .contact-grid {
-                grid-template-columns: 7fr 5fr;
-            }
-        }
+      .contact-form-container {
+        background-color: var(--color-surface-container-lowest);
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--color-glass-border);
+        padding: 24px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        position: relative;
+        overflow: hidden;
+      }
 
+      @media (min-width: 768px) {
         .contact-form-container {
-            background-color: var(--color-surface-container-lowest);
-            border-radius: 16px;
-            border: 1px solid var(--color-glass-border);
-            padding: 24px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-            position: relative;
-            overflow: hidden;
+          padding: 32px;
         }
+      }
 
-        @media (min-width: 768px) {
-            .contact-form-container {
-                padding: 32px;
-            }
-        }
+      .form-bg-effect {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 256px;
+        height: 256px;
+        background-color: rgba(255, 107, 0, 0.05);
+        border-radius: 50%;
+        filter: blur(48px);
+        margin-right: -40px;
+        margin-top: -40px;
+        pointer-events: none;
+      }
 
-        .form-bg-effect {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 256px;
-            height: 256px;
-            background-color: rgba(255, 107, 0, 0.05);
-            border-radius: 50%;
-            filter: blur(48px);
-            margin-right: -40px;
-            margin-top: -40px;
-            pointer-events: none;
-        }
+      .form-title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-stack-md);
+        position: relative;
+        z-index: 10;
+      }
 
-        .form-title {
-            font-size: 24px;
-            line-height: 32px;
-            font-weight: 600;
-            color: var(--color-secondary);
-            margin-bottom: var(--spacing-stack-md);
-            position: relative;
-            z-index: 10;
-        }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: var(--spacing-stack-md);
+      }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-bottom: var(--spacing-stack-md);
-        }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-stack-md);
+      }
 
+      @media (min-width: 768px) {
         .form-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-stack-md);
+          grid-template-columns: 1fr 1fr;
         }
+      }
 
-        @media (min-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+      .form-label {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: var(--color-on-surface-variant);
+      }
 
-        .form-label {
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: var(--color-on-surface-variant);
-        }
+      .form-required {
+        color: var(--color-error);
+      }
 
-        .form-required {
-            color: var(--color-error);
-        }
+      .form-input {
+        background-color: var(--color-surface-subtle);
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-size: 16px;
+        color: var(--color-on-surface);
+        width: 100%;
+        transition: all 0.2s;
+      }
 
-        .form-input {
-            background-color: var(--color-surface-subtle);
-            border: 1px solid var(--color-outline-variant);
-            border-radius: 8px;
-            padding: 12px 16px;
-            font-size: 16px;
-            color: var(--color-on-surface);
-            width: 100%;
-            transition: all 0.2s;
-        }
+      .form-input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 1px var(--color-primary);
+      }
 
-        .form-input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 1px var(--color-primary);
-        }
+      .form-input::placeholder {
+        color: #9ca3af;
+      }
 
-        .form-input::placeholder {
-            color: #9ca3af;
-        }
+      select.form-input {
+        appearance: none;
+      }
 
-        select.form-input {
-            appearance: none;
-        }
+      textarea.form-input {
+        resize: none;
+      }
 
-        textarea.form-input {
-            resize: none;
-        }
+      .btn-submit {
+        width: 100%;
+        padding: 12px 32px;
+        margin-top: var(--spacing-stack-sm);
+      }
 
+      @media (min-width: 768px) {
         .btn-submit {
-            width: 100%;
-            padding: 12px 32px;
-            margin-top: var(--spacing-stack-sm);
+          width: auto;
         }
+      }
 
-        @media (min-width: 768px) {
-            .btn-submit {
-                width: auto;
-            }
-        }
+      .contact-info-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-gutter);
+      }
 
-        .contact-info-container {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-gutter);
-        }
+      .info-card {
+        background-color: var(--color-secondary);
+        color: var(--color-on-primary);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        flex-grow: 1;
+      }
 
+      @media (min-width: 768px) {
         .info-card {
-            background-color: var(--color-secondary);
-            color: var(--color-on-primary);
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-            flex-grow: 1;
+          padding: 32px;
         }
+      }
 
-        @media (min-width: 768px) {
-            .info-card {
-                padding: 32px;
-            }
-        }
+      .info-title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        margin-bottom: var(--spacing-stack-md);
+      }
 
-        .info-title {
-            font-size: 24px;
-            line-height: 32px;
-            font-weight: 600;
-            margin-bottom: var(--spacing-stack-md);
-        }
+      .info-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-stack-md);
+      }
 
-        .info-list {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-stack-md);
-        }
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
 
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
+      .info-icon {
+        color: var(--color-primary);
+        margin-top: 4px;
+      }
 
-        .info-icon {
-            color: var(--color-primary);
-            margin-top: 4px;
-        }
+      .info-label {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+      }
 
-        .info-label {
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
+      .info-text {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
-        .info-text {
-            font-size: 16px;
-            line-height: 24px;
-        }
+      .info-link:hover {
+        color: var(--color-primary);
+        text-decoration: underline;
+      }
 
-        .info-link:hover {
-            color: var(--color-primary);
-            text-decoration: underline;
-        }
+      .map-card {
+        background-color: var(--color-surface-container-lowest);
+        border: 1px solid var(--color-glass-border);
+        border-radius: 16px;
+        height: 256px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      }
 
-        .map-card {
-            background-color: var(--color-surface-container-lowest);
-            border: 1px solid var(--color-glass-border);
-            border-radius: 16px;
-            height: 256px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-        }
+      .map-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
 
-        .map-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
+      .map-card:hover .map-img {
+        transform: scale(1.05);
+      }
 
-        .map-card:hover .map-img {
-            transform: scale(1.05);
-        }
+      .map-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(255, 255, 255, 0.9),
+          transparent
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 24px;
+      }
 
-        .map-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
-            display: flex;
-            align-items: flex-end;
-            padding: 24px;
-        }
+      .btn-map {
+        background-color: var(--color-surface);
+        color: var(--color-secondary);
+        border: 1px solid var(--color-glass-border);
+        border-radius: 8px;
+        padding: 8px 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+      }
 
-        .btn-map {
-            background-color: var(--color-surface);
-            color: var(--color-secondary);
-            border: 1px solid var(--color-glass-border);
-            border-radius: 8px;
-            padding: 8px 16px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            font-weight: 500;
-        }
+      .btn-map:hover {
+        background-color: var(--color-surface-subtle);
+        color: var(--color-primary);
+      }
 
-        .btn-map:hover {
-            background-color: var(--color-surface-subtle);
-            color: var(--color-primary);
-        }
+      /* Partners Section */
+      .partners {
+        max-width: var(--spacing-container-max);
+        margin: var(--spacing-section-padding) auto 0;
+        padding: 0 var(--spacing-margin-mobile);
+        text-align: center;
+      }
 
-        /* Partners Section */
+      @media (min-width: 768px) {
         .partners {
-            max-width: var(--spacing-container-max);
-            margin: var(--spacing-section-padding) auto 0;
-            padding: 0 var(--spacing-margin-mobile);
-            text-align: center;
+          padding: 0 var(--spacing-margin-desktop);
         }
+      }
 
-        @media (min-width: 768px) {
-            .partners {
-                padding: 0 var(--spacing-margin-desktop);
-            }
-        }
+      .partners-title {
+        font-size: 30px;
+        line-height: 38px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-stack-lg);
+      }
 
-        .partners-title {
-            font-size: 30px;
-            line-height: 38px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: var(--color-secondary);
-            margin-bottom: var(--spacing-stack-lg);
-        }
+      .partners-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-stack-lg);
+        opacity: 0.7;
+      }
 
-        .partners-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: var(--spacing-stack-lg);
-            opacity: 0.7;
-        }
+      .partner-logo {
+        height: 48px;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+      }
 
-        .partner-logo {
-            height: 48px;
-            filter: grayscale(100%);
-            transition: all 0.3s ease;
-        }
+      .partner-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
 
-        .partner-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
+      /* Footer */
+      footer {
+        padding-top: var(--spacing-section-padding);
+        padding-bottom: var(--spacing-stack-lg);
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid var(--color-glass-border);
+      }
 
-        /* Footer */
-        footer {
-            padding-top: var(--spacing-section-padding);
-            padding-bottom: var(--spacing-stack-lg);
-            background-color: rgba(255,255,255,0.8);
-            backdrop-filter: blur(8px);
-            border-top: 1px solid var(--color-glass-border);
-        }
+      .footer-content {
+        max-width: var(--spacing-container-max);
+        margin: 0 auto;
+        padding: 0 var(--spacing-margin-mobile);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-gutter);
+        opacity: 0.9;
+        transition: opacity 0.2s;
+      }
 
+      .footer-content:hover {
+        opacity: 1;
+      }
+
+      @media (min-width: 768px) {
         .footer-content {
-            max-width: var(--spacing-container-max);
-            margin: 0 auto;
-            padding: 0 var(--spacing-margin-mobile);
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-gutter);
-            opacity: 0.9;
-            transition: opacity 0.2s;
+          padding: 0 var(--spacing-margin-desktop);
+          grid-template-columns: repeat(4, 1fr);
         }
+      }
 
-        .footer-content:hover {
-            opacity: 1;
-        }
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
 
-        @media (min-width: 768px) {
-            .footer-content {
-                padding: 0 var(--spacing-margin-desktop);
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
+      @media (min-width: 768px) {
         .footer-brand {
-            grid-column: 1 / -1;
+          grid-column: span 1;
         }
+      }
 
-        @media (min-width: 768px) {
-            .footer-brand {
-                grid-column: span 1;
-            }
-        }
+      .footer-logo {
+        margin-bottom: var(--spacing-stack-md);
+      }
 
-        .footer-logo {
-            margin-bottom: var(--spacing-stack-md);
-        }
+      .footer-logo img {
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+      }
 
-        .footer-logo img {
-            height: 48px;
-            width: auto;
-            object-fit: contain;
-        }
+      .footer-desc {
+        color: var(--color-on-surface-variant);
+        margin-bottom: var(--spacing-stack-md);
+      }
 
-        .footer-desc {
-            color: var(--color-on-surface-variant);
-            margin-bottom: var(--spacing-stack-md);
-        }
+      .footer-copyright {
+        color: var(--color-on-surface-variant);
+      }
 
-        .footer-copyright {
-            color: var(--color-on-surface-variant);
-        }
+      .footer-links-container {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
 
+      @media (min-width: 768px) {
         .footer-links-container {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
+          grid-column: span 3;
+          justify-content: flex-end;
         }
+      }
 
-        @media (min-width: 768px) {
-            .footer-links-container {
-                grid-column: span 3;
-                justify-content: flex-end;
-            }
-        }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-gutter);
+        row-gap: var(--spacing-stack-sm);
+      }
 
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-gutter);
-            row-gap: var(--spacing-stack-sm);
-        }
+      .footer-link {
+        color: var(--color-on-surface-variant);
+        transition: color 0.2s;
+      }
 
-        .footer-link {
-            color: var(--color-on-surface-variant);
-            transition: color 0.2s;
-        }
-
-        .footer-link:hover {
-            color: var(--color-primary);
-        }
+      .footer-link:hover {
+        color: var(--color-primary);
+      }
     </style>
-</head>
-<body>
-<!-- TopNavBar -->
-<nav class="top-nav">
-<div class="nav-container">
-<div class="brand-logo">
-<a href="incubation.html"><img alt="Startup Barishal Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"/></a>
-</div>
-<div class="nav-content">
-<ul class="nav-links">
-<li><a href="incubation.html">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Resource</a></li>
-<li><a href="#">Events &amp; Blog</a></li>
-<li><a href="#">Incubation</a></li>
-</ul>
-<div class="nav-actions">
-<button class="btn btn-outline">Membership</button>
-<button class="btn btn-primary">Apply Now</button>
-</div>
-</div>
-</div>
-</nav>
-<!-- Mobile Top App Bar -->
-<header class="mobile-header">
-<div class="brand-logo">
-<a href="incubation.html"><img alt="Startup Barishal Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"/></a>
-</div>
-<button class="menu-toggle">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</header>
-<!-- Main Content Canvas -->
-<main>
-<!-- Hero Section -->
-<section class="hero">
-<div class="hero-content">
-<h1 class="hero-title">Let's Connect</h1>
-<p class="hero-desc">
-                    Whether you have a question about our incubation program, need mentoring, or want to explore partnerships, we're here to help foster your entrepreneurial journey.
-                </p>
-</div>
-</section>
-<!-- Contact Bento Grid -->
-<section class="contact-grid">
-<!-- Contact Form Column -->
-<div class="contact-form-container">
-<div class="form-bg-effect"></div>
-<h2 class="form-title">Send us a message</h2>
-<form>
-<div class="form-row">
-<div class="form-group">
-<label class="form-label" for="firstName">First Name</label>
-<input class="form-input" id="firstName" placeholder="Jane" type="text"/>
-</div>
-<div class="form-group">
-<label class="form-label" for="lastName">Last Name</label>
-<input class="form-input" id="lastName" placeholder="Doe" type="text"/>
-</div>
-</div>
-<div class="form-group">
-<label class="form-label" for="email">Email Address <span class="form-required">*</span></label>
-<input class="form-input" id="email" placeholder="jane@example.com" required="" type="email"/>
-</div>
-<div class="form-group">
-<label class="form-label" for="subject">Subject</label>
-<select class="form-input" id="subject">
-<option>General Inquiry</option>
-<option>Incubation Program</option>
-<option>Mentorship</option>
-<option>Partnership</option>
-</select>
-</div>
-<div class="form-group">
-<label class="form-label" for="message">Message <span class="form-required">*</span></label>
-<textarea class="form-input" id="message" placeholder="How can we help you?" required="" rows="5"></textarea>
-</div>
-<button class="btn btn-primary btn-submit" type="submit">
-<span>Send Message</span>
-<span class="material-symbols-outlined" style="font-size: 14px;">send</span>
-</button>
-</form>
-</div>
-<!-- Info Column -->
-<div class="contact-info-container">
-<!-- Direct Contact Card -->
-<div class="info-card">
-<h3 class="info-title">Contact Information</h3>
-<ul class="info-list">
-<li class="info-item">
-<span class="material-symbols-outlined info-icon">location_on</span>
-<div>
-<h4 class="info-label">Office Address</h4>
-<p class="info-text">
-                                    6th Floor, Software Technology Park,<br/>
-                                    Barishal, Bangladesh
-                                </p>
-</div>
-</li>
-<li class="info-item">
-<span class="material-symbols-outlined info-icon">mail</span>
-<div>
-<h4 class="info-label">Email Us</h4>
-<p class="info-text">
-<a class="info-link" href="mailto:startupbarishal@gmail.com">startupbarishal@gmail.com</a>
-</p>
-</div>
-</li>
-<li class="info-item">
-<span class="material-symbols-outlined info-icon">call</span>
-<div>
-<h4 class="info-label">Call Us</h4>
-<p class="info-text">
-<a class="info-link" href="tel:+8801838765607">+8801838-765607</a>
-</p>
-</div>
-</li>
-</ul>
-</div>
-<!-- Map Placeholder Card -->
-<div class="map-card">
-<img alt="Map of Barishal" class="map-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdAaYIT0ccS-RJcwDYTh2aoqQxIUIMQX4oO5xTMLAXtC3tB4nATFEi7TAutrQ_9S6MoVcCDtHMXCckpX-h0ZESqaSuJ-cScp3uS_3sq8cM6gLVKB5h9IQmtgonIJkFuN-g2NILnVcd0pomPf4MdBD0a6Q8rpx5iv4w5rPyQP9o49UfrmYeV2HXCzJhkJF7JXW7RYWTLOSc2gcqVM9hivARnWnoVvig8bCdJS-JM3vCg8pQcB1_42ZDFPEfTF5lRcb94jA62cM1XDc"/>
-<div class="map-overlay">
-<button class="btn btn-map">
-<span class="material-symbols-outlined" style="font-size: 18px;">directions</span>
-                            Get Directions
-                        </button>
-</div>
-</div>
-</div>
-</section>
-<!-- Partners Section -->
-<section class="partners">
-<h2 class="partners-title">Our Partners</h2>
-<div class="partners-grid">
-<img alt="Partner 1" class="partner-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGPZ4tLah88gWmXJ3ChTBWgMyg6b4VxrUv-ExYkE0VNU6B9Ri7waY9kXIUiDVCnZDVg9HEvNioUYLpx6SUuiEwGWqy0xUx0Lt-HmCAmTojJsyZhSIfE2vRvgRwv8OsPitl8ttT8INKsYlxAw6ZY4GN22xeSOpLCos9OhuvMfSHHO85MCgmK9e9b0osbyR_5JXHllAw-FQYl5NUTy7FohCs08oeXhScP30NEWVBwbKsm4Uq_bfDPMnC7BoE6rM739q9jaSqsmD-ub8"/>
-<img alt="Partner 2" class="partner-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5a86_GWLWI-9PoytVtgH8pYK6njTEU2opUdA0UGg7vcrsOn4BPqNaIt8_6HmTs9-uXWkw-kEG2ypzCFEomKfE9leW0-OzDy2x4EiBqubOri5q6Hg3FTBHA26ay3W1kxrFyVTDti5ugYEdloMQxOK0gQe7MQLewkORQToy1ytZSjHhHDR0lrfKUvkLa36wA426nlkjmEUXCYWCtuxywIcFOsyReapBJIyZ8NwQ6AhYbpPQoAugGk25oLwNiaz80OxTWoyWgRCrx0"/>
-<img alt="Partner 3" class="partner-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8OMnMiMbSaXLvGLNZwTuvPOeMSWhnPK5GWhJJyyYLDtf_Ix3WKfubODZX-9SdI8hdkwlj4OURi3EM0dH5B9YO4mF7JcFsCF60KDLD1n4loK1rDKqsHEUyOla6PqRszu3K8j_P8PVsT22ONOsnxkOHEdLqcwxd7avhmxtuZ1EqrUku0mgC0PgHY7UOo0pT4agisOZaRjgewLcJmn-uIBevduonVuRQTBDE9fHSlcefhcRH7u7eMT-SE_WbZFDxGLtMThB2tp2YebM"/>
-<img alt="Partner 4" class="partner-logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjMr8T_k8wjN2tkt1l7dE7OtTJw1XIFuz9c3pbBgv7OjOppDMs831jGIjIWo0rW6PpXLrgNmPgf5THqKXGZLzaPgP4C2Y2hegFV38OuZwJuOH9gk_K8j6hTMPFQjGgndyN_iWxsqd0vEbNstz52LIAUhYmeIEfXdSDoMf7oGqH4gIBOAegb5xxptCX4yKFWgt6d1hpy3wdRAyjKa86D-qB_tfOX8m7Kr8Ge9NgG1m1RpVVwI20K7Oo2CR5xziPsoSU5jWDaU5smhU"/>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer>
-<div class="footer-content">
-<!-- Brand Column -->
-<div class="footer-brand">
-<div class="footer-logo">
-<a href="incubation.html"><img alt="Startup Barishal Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"/></a>
-</div>
-<p class="footer-desc">
-                    Empowering the next generation of innovators.
-                </p>
-<div class="footer-copyright">
-                    © 2024 Startup Barishal.
+  </head>
+  <body>
+    <!-- TopNavBar -->
+    <nav class="top-nav">
+      <div class="nav-container">
+        <div class="brand-logo">
+          <a href="incubation.html"
+            ><img
+              alt="Startup Barishal Logo"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"
+          /></a>
+        </div>
+        <div class="nav-content">
+          <ul class="nav-links">
+            <li><a href="incubation.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Resource</a></li>
+            <li><a href="#">Events &amp; Blog</a></li>
+            <li><a href="#">Incubation</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button class="btn btn-outline">Membership</button>
+            <button class="btn btn-primary">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Top App Bar -->
+    <header class="mobile-header">
+      <div class="brand-logo">
+        <a href="incubation.html"
+          ><img
+            alt="Startup Barishal Logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"
+        /></a>
+      </div>
+      <button class="menu-toggle">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
+    <!-- Main Content Canvas -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Let's Connect</h1>
+          <p class="hero-desc">
+            Whether you have a question about our incubation program, need
+            mentoring, or want to explore partnerships, we're here to help
+            foster your entrepreneurial journey.
+          </p>
+        </div>
+      </section>
+      <!-- Contact Bento Grid -->
+      <section class="contact-grid">
+        <!-- Contact Form Column -->
+        <div class="contact-form-container">
+          <div class="form-bg-effect"></div>
+          <h2 class="form-title">Send us a message</h2>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input
+                  class="form-input"
+                  id="firstName"
+                  placeholder="Jane"
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input
+                  class="form-input"
+                  id="lastName"
+                  placeholder="Doe"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email"
+                >Email Address <span class="form-required">*</span></label
+              >
+              <input
+                class="form-input"
+                id="email"
+                placeholder="jane@example.com"
+                required=""
+                type="email"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-input" id="subject">
+                <option>General Inquiry</option>
+                <option>Incubation Program</option>
+                <option>Mentorship</option>
+                <option>Partnership</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message"
+                >Message <span class="form-required">*</span></label
+              >
+              <textarea
+                class="form-input"
+                id="message"
+                placeholder="How can we help you?"
+                required=""
+                rows="5"
+              ></textarea>
+            </div>
+            <button class="btn btn-primary btn-submit" type="submit">
+              <span>Send Message</span>
+              <span class="material-symbols-outlined" style="font-size: 14px"
+                >send</span
+              >
+            </button>
+          </form>
+        </div>
+        <!-- Info Column -->
+        <div class="contact-info-container">
+          <!-- Direct Contact Card -->
+          <div class="info-card">
+            <h3 class="info-title">Contact Information</h3>
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="material-symbols-outlined info-icon"
+                  >location_on</span
+                >
+                <div>
+                  <h4 class="info-label">Office Address</h4>
+                  <p class="info-text">
+                    6th Floor, Software Technology Park,<br />
+                    Barishal, Bangladesh
+                  </p>
                 </div>
-</div>
-<!-- Links -->
-<div class="footer-links-container">
-<ul class="footer-links">
-<li><a class="footer-link" href="#">Privacy Policy</a></li>
-<li><a class="footer-link" href="#">Terms of Service</a></li>
-<li><a class="footer-link" href="#">Cookie Policy</a></li>
-<li><a class="footer-link" href="#">FAQ</a></li>
-</ul>
-</div>
-</div>
-</footer>
-</body></html>
+              </li>
+              <li class="info-item">
+                <span class="material-symbols-outlined info-icon">mail</span>
+                <div>
+                  <h4 class="info-label">Email Us</h4>
+                  <p class="info-text">
+                    <a class="info-link" href="mailto:startupbarishal@gmail.com"
+                      >startupbarishal@gmail.com</a
+                    >
+                  </p>
+                </div>
+              </li>
+              <li class="info-item">
+                <span class="material-symbols-outlined info-icon">call</span>
+                <div>
+                  <h4 class="info-label">Call Us</h4>
+                  <p class="info-text">
+                    <a class="info-link" href="tel:+8801838765607"
+                      >+8801838-765607</a
+                    >
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Map Placeholder Card -->
+          <div class="map-card">
+            <img
+              alt="Map of Barishal"
+              class="map-img"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdAaYIT0ccS-RJcwDYTh2aoqQxIUIMQX4oO5xTMLAXtC3tB4nATFEi7TAutrQ_9S6MoVcCDtHMXCckpX-h0ZESqaSuJ-cScp3uS_3sq8cM6gLVKB5h9IQmtgonIJkFuN-g2NILnVcd0pomPf4MdBD0a6Q8rpx5iv4w5rPyQP9o49UfrmYeV2HXCzJhkJF7JXW7RYWTLOSc2gcqVM9hivARnWnoVvig8bCdJS-JM3vCg8pQcB1_42ZDFPEfTF5lRcb94jA62cM1XDc"
+            />
+            <div class="map-overlay">
+              <button class="btn btn-map">
+                <span class="material-symbols-outlined" style="font-size: 18px"
+                  >directions</span
+                >
+                Get Directions
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Partners Section -->
+      <section class="partners">
+        <h2 class="partners-title">Our Partners</h2>
+        <div class="partners-grid">
+          <img
+            alt="Partner 1"
+            class="partner-logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGPZ4tLah88gWmXJ3ChTBWgMyg6b4VxrUv-ExYkE0VNU6B9Ri7waY9kXIUiDVCnZDVg9HEvNioUYLpx6SUuiEwGWqy0xUx0Lt-HmCAmTojJsyZhSIfE2vRvgRwv8OsPitl8ttT8INKsYlxAw6ZY4GN22xeSOpLCos9OhuvMfSHHO85MCgmK9e9b0osbyR_5JXHllAw-FQYl5NUTy7FohCs08oeXhScP30NEWVBwbKsm4Uq_bfDPMnC7BoE6rM739q9jaSqsmD-ub8"
+          />
+          <img
+            alt="Partner 2"
+            class="partner-logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5a86_GWLWI-9PoytVtgH8pYK6njTEU2opUdA0UGg7vcrsOn4BPqNaIt8_6HmTs9-uXWkw-kEG2ypzCFEomKfE9leW0-OzDy2x4EiBqubOri5q6Hg3FTBHA26ay3W1kxrFyVTDti5ugYEdloMQxOK0gQe7MQLewkORQToy1ytZSjHhHDR0lrfKUvkLa36wA426nlkjmEUXCYWCtuxywIcFOsyReapBJIyZ8NwQ6AhYbpPQoAugGk25oLwNiaz80OxTWoyWgRCrx0"
+          />
+          <img
+            alt="Partner 3"
+            class="partner-logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8OMnMiMbSaXLvGLNZwTuvPOeMSWhnPK5GWhJJyyYLDtf_Ix3WKfubODZX-9SdI8hdkwlj4OURi3EM0dH5B9YO4mF7JcFsCF60KDLD1n4loK1rDKqsHEUyOla6PqRszu3K8j_P8PVsT22ONOsnxkOHEdLqcwxd7avhmxtuZ1EqrUku0mgC0PgHY7UOo0pT4agisOZaRjgewLcJmn-uIBevduonVuRQTBDE9fHSlcefhcRH7u7eMT-SE_WbZFDxGLtMThB2tp2YebM"
+          />
+          <img
+            alt="Partner 4"
+            class="partner-logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjMr8T_k8wjN2tkt1l7dE7OtTJw1XIFuz9c3pbBgv7OjOppDMs831jGIjIWo0rW6PpXLrgNmPgf5THqKXGZLzaPgP4C2Y2hegFV38OuZwJuOH9gk_K8j6hTMPFQjGgndyN_iWxsqd0vEbNstz52LIAUhYmeIEfXdSDoMf7oGqH4gIBOAegb5xxptCX4yKFWgt6d1hpy3wdRAyjKa86D-qB_tfOX8m7Kr8Ge9NgG1m1RpVVwI20K7Oo2CR5xziPsoSU5jWDaU5smhU"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <a href="incubation.html"
+              ><img
+                alt="Startup Barishal Logo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"
+            /></a>
+          </div>
+          <p class="footer-desc">
+            Empowering the next generation of innovators.
+          </p>
+          <div class="footer-copyright">© 2024 Startup Barishal.</div>
+        </div>
+        <!-- Links -->
+        <div class="footer-links-container">
+          <ul class="footer-links">
+            <li><a class="footer-link" href="#">Privacy Policy</a></li>
+            <li><a class="footer-link" href="#">Terms of Service</a></li>
+            <li><a class="footer-link" href="#">Cookie Policy</a></li>
+            <li><a class="footer-link" href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
