@@ -1,306 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Incubation - Startup Barishal</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary": "#5d5e65",
-                        "on-secondary-fixed": "#191b22",
-                        "primary": "#004481",
-                        "inverse-surface": "#2e3131",
-                        "inverse-on-surface": "#eff1f1",
-                        "on-secondary-fixed-variant": "#45464e",
-                        "secondary-fixed": "#e2e2eb",
-                        "surface-container-low": "#f2f4f4",
-                        "on-background": "#191c1d",
-                        "surface-bright": "#f8fafa",
-                        "surface-container-highest": "#e1e3e3",
-                        "background": "#f8fafa",
-                        "error": "#ba1a1a",
-                        "on-error-container": "#93000a",
-                        "secondary-container": "#e2e2eb",
-                        "on-tertiary": "#ffffff",
-                        "tertiary": "#003ba3",
-                        "on-primary-fixed": "#001c3a",
-                        "surface-variant": "#e1e3e3",
-                        "surface-container-high": "#e6e8e8",
-                        "glass-border": "rgba(6, 92, 169, 0.08)",
-                        "on-error": "#ffffff",
-                        "on-surface-variant": "#414751",
-                        "surface-tint": "#0f5fac",
-                        "tertiary-fixed": "#dbe1ff",
-                        "inverse-primary": "#a6c8ff",
-                        "surface-dim": "#d8dada",
-                        "primary-fixed": "#d4e3ff",
-                        "primary-container": "#065ca9",
-                        "on-tertiary-fixed": "#00174c",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-fixed-variant": "#004786",
-                        "on-surface": "#191c1d",
-                        "secondary-fixed-dim": "#c5c6ce",
-                        "on-tertiary-fixed-variant": "#003daa",
-                        "surface-container": "#eceeee",
-                        "surface-subtle": "#F8FAFC",
-                        "outline-variant": "#c1c6d3",
-                        "on-secondary-container": "#63646b",
-                        "outline": "#727782",
-                        "on-primary-container": "#bdd5ff",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-container": "#c7d2ff",
-                        "error-container": "#ffdad6",
-                        "primary-fixed-dim": "#a6c8ff",
-                        "on-primary": "#ffffff",
-                        "surface": "#f8fafa",
-                        "tertiary-container": "#004fd6",
-                        "ink-muted": "#64748B",
-                        "tertiary-fixed-dim": "#b4c5ff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px",
-                        "2xl": "1rem",
-                        "3xl": "1.5rem"
-                    },
-                    "spacing": {
-                        "container-max": "1280px",
-                        "stack-md": "16px",
-                        "margin-desktop": "64px",
-                        "stack-lg": "32px",
-                        "gutter": "24px",
-                        "stack-sm": "8px",
-                        "margin-mobile": "20px",
-                        "section-padding": "80px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Inter"],
-                        "body-md": ["Inter"],
-                        "display-lg": ["Inter"],
-                        "headline-sm": ["Inter"],
-                        "headline-md": ["Inter"],
-                        "caption": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "label-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-</head>
-<body class="bg-background text-on-background min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-glass-border shadow-sm transition-all duration-300 ease-in-out">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
-<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">Startup Barishal</div>
-<div class="hidden md:flex space-x-gutter items-center">
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-200" href="#">Home</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-200" href="#">About</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-200" href="#">Resource</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-200" href="#">Events &amp; Blog</a>
-<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-bold" href="#">Incubation</a>
-</div>
-<div class="hidden md:flex items-center space-x-stack-md">
-<button class="font-label-md text-label-md text-primary hover:text-primary-container px-4 py-2 border border-primary rounded-xl transition-colors">Membership</button>
-<button class="font-label-md text-label-md bg-primary text-on-primary px-6 py-2 rounded-xl hover:bg-primary-container transition-colors shadow-[0_4px_20px_rgba(0,68,129,0.15)]">Apply Now</button>
-</div>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
-</button>
-</div>
-</nav>
-<main class="flex-grow pt-24 pb-section-padding">
-<!-- Hero Section -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-margin-desktop items-center">
-<div class="space-y-stack-lg">
-<div class="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-label-md text-label-md">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
-<span>Incubation Cohorts</span>
-</div>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">Accelerate Your Startup Journey</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                        Startup incubation programme to form investor and creators forum and entrepreneurship connection. We provide the resources, mentorship, and network you need to foster your growth.
-                    </p>
-<div class="flex flex-wrap gap-stack-md pt-stack-md">
-<button class="font-label-md text-label-md bg-primary text-on-primary px-8 py-3 rounded-2xl hover:bg-primary-container transition-all shadow-[0_8px_30px_rgba(0,68,129,0.2)] hover:shadow-[0_8px_30px_rgba(0,68,129,0.3)] hover:-translate-y-0.5">Start Application</button>
-<button class="font-label-md text-label-md text-primary border border-primary px-8 py-3 rounded-2xl hover:bg-surface-container transition-all">Learn More</button>
-</div>
-</div>
-<div class="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.05)] border border-glass-border">
-<div class="absolute inset-0 bg-gradient-to-tr from-surface-tint/10 to-transparent z-10"></div>
-<img alt="A team of young diverse entrepreneurs collaborating around a large wooden table in a bright, modern minimalist co-working space. Soft natural light streams through large windows, highlighting the deep corporate blues and pristine white surfaces of their laptops and notebooks. The atmosphere is energetic, professional, and focused on momentum and innovation." class="w-full h-full object-cover" data-alt="A team of young diverse entrepreneurs collaborating around a large wooden table in a bright, modern minimalist co-working space. Soft natural light streams through large windows, highlighting the deep corporate blues and pristine white surfaces of their laptops and notebooks. The atmosphere is energetic, professional, and focused on momentum and innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT_HAzmMi34jNeme-OGSl-OQxLzNU_GkB5O5Dg_AGEMrwz-WdiGFyYRNbqq6nxWwbVW4SU9eYk-MOqOslPHgSomf7wibXhFkL9p_X1_bMOILJEe9xKa6m37VXNSaPH6eHGYY0PxPEEW1Oq_f0DK44Snx1Giov5LZOl5k0IAv0cvc43JyRGYkIKVO3T4MnkiXC4jzjQNgF0jqFoGH7ioIFegzVppvkO2652bgwBxpq-YzFX_qigsgFrUvKl2irKOFWdxekJxBY7UeQ"/>
-</div>
-</div>
-</section>
-<!-- Stats Section -->
-<section class="bg-surface-container-low py-section-padding border-y border-glass-border">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-<div class="space-y-stack-sm p-gutter bg-surface rounded-2xl border border-glass-border shadow-sm">
-<h3 class="font-display-lg-mobile text-display-lg-mobile text-primary">0+</h3>
-<p class="font-label-md text-label-md text-on-surface-variant">Events &amp; Workshop</p>
-</div>
-<div class="space-y-stack-sm p-gutter bg-surface rounded-2xl border border-glass-border shadow-sm">
-<h3 class="font-display-lg-mobile text-display-lg-mobile text-primary">0+</h3>
-<p class="font-label-md text-label-md text-on-surface-variant">Startups Mentored</p>
-</div>
-<div class="space-y-stack-sm p-gutter bg-surface rounded-2xl border border-glass-border shadow-sm">
-<h3 class="font-display-lg-mobile text-display-lg-mobile text-primary">0+</h3>
-<p class="font-label-md text-label-md text-on-surface-variant">Investors Onboarded</p>
-</div>
-<div class="space-y-stack-sm p-gutter bg-surface rounded-2xl border border-glass-border shadow-sm">
-<h3 class="font-display-lg-mobile text-display-lg-mobile text-primary">0+</h3>
-<p class="font-label-md text-label-md text-on-surface-variant">Cohorts Completed</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Program Offerings (Bento Grid) -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
-<div class="text-center space-y-stack-md mb-margin-desktop">
-<h2 class="font-headline-md text-headline-md text-on-background">What We Offer</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Comprehensive support designed for early-stage founders.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-[250px]">
-<!-- Networking (Large) -->
-<div class="md:col-span-2 bg-surface border border-glass-border rounded-3xl p-margin-desktop relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.05)] transition-all duration-300">
-<div class="absolute right-0 bottom-0 opacity-5 w-64 h-64 translate-x-1/4 translate-y-1/4">
-<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">hub</span>
-</div>
-<div class="relative z-10 space-y-stack-md">
-<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-stack-lg">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-background">Networking</h3>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Participate in weekly startup talk sessions and set goals for your company. You will also have productive group sessions every week.</p>
-</div>
-</div>
-<!-- Mentoring -->
-<div class="bg-surface border border-glass-border rounded-3xl p-gutter relative group hover:border-primary/30 hover:shadow-sm transition-all duration-300 flex flex-col justify-between">
-<div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-secondary mb-stack-md">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">school</span>
-</div>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Mentoring</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Learn how to start a startup with startup School courses. Have access to a community of international founders.</p>
-</div>
-</div>
-<!-- Funding -->
-<div class="bg-surface border border-glass-border rounded-3xl p-gutter relative group hover:border-primary/30 hover:shadow-sm transition-all duration-300 flex flex-col justify-between">
-<div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-secondary mb-stack-md">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">payments</span>
-</div>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Funding</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Want to get startup funding but don't know how? Learn how to get funding for your early-stage startup.</p>
-</div>
-</div>
-<!-- Consultation -->
-<div class="bg-surface border border-glass-border rounded-3xl p-gutter relative group hover:border-primary/30 hover:shadow-sm transition-all duration-300 flex flex-col justify-between">
-<div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-secondary mb-stack-md">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">support_agent</span>
-</div>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Consultation</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">We ensure value and nurture for young leadership, creating them today for tomorrow's leader.</p>
-</div>
-</div>
-<!-- Co-Working -->
-<div class="bg-surface border border-glass-border rounded-3xl p-gutter relative group hover:border-primary/30 hover:shadow-sm transition-all duration-300 flex flex-col justify-between">
-<div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-secondary mb-stack-md">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">desk</span>
-</div>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Co-Working</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Join with our amazing network and find passionate entrepreneurs near you to build meaningful connections.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-padding">
-<div class="bg-primary text-on-primary rounded-3xl p-margin-mobile md:p-margin-desktop relative overflow-hidden flex flex-col items-center text-center shadow-[0_20px_40px_rgba(0,68,129,0.15)]">
-<!-- Decorative background elements -->
-<div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-<div class="absolute -top-[50%] -left-[10%] w-[70%] h-[200%] bg-white/5 rounded-full blur-3xl transform -rotate-12"></div>
-<div class="absolute -bottom-[50%] -right-[10%] w-[50%] h-[150%] bg-tertiary/20 rounded-full blur-3xl transform rotate-12"></div>
-</div>
-<div class="relative z-10 max-w-3xl space-y-stack-lg">
-<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg">Ready to Launch?</h2>
-<p class="font-body-lg text-body-lg opacity-90">
-                        Join our next incubation cohort and get the resources, mentorship, and network you need to turn your idea into a successful venture.
-                    </p>
-<button class="mt-stack-lg font-label-md text-label-md bg-white text-primary px-8 py-4 rounded-2xl hover:bg-surface-container transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        Apply for Incubation
-                    </button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low dark:bg-inverse-surface w-full pt-section-padding pb-stack-lg no-shadows">
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="space-y-stack-md col-span-1 md:col-span-1">
-<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">Startup Barishal</div>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim">
-                    Empowering the next generation of innovators.
-                </p>
-</div>
-<div class="space-y-stack-md">
-<h4 class="font-label-md text-label-md text-primary font-bold">Quick Links</h4>
-<ul class="space-y-stack-sm">
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="pages/about.html">About</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="pages/contact.html">Contact</a></li>
-<li><a class="font-body-md text-body-md text-primary font-bold hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="pages/incubation.html">Incubation</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="pages/blog.html">Blog</a></li>
-</ul>
-</div>
-<div class="space-y-stack-md">
-<h4 class="font-label-md text-label-md text-primary font-bold">Legal</h4>
-<ul class="space-y-stack-sm">
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="#">Privacy Policy</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="#">Terms of Service</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="#">Cookie Policy</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim hover:text-tertiary transition-colors duration-200 opacity-90 hover:opacity-100" href="#">FAQ</a></li>
-</ul>
-</div>
-<div class="space-y-stack-md">
-<h4 class="font-label-md text-label-md text-primary font-bold">Newsletter</h4>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim text-sm">Get weekly updates of our events.</p>
-<form class="flex flex-col space-y-2">
-<input class="bg-surface-subtle border-glass-border rounded-lg px-4 py-2 text-body-md focus:ring-primary focus:border-primary outline-none transition-shadow" placeholder="Email *" required="" type="email"/>
-<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors" type="submit">Subscribe</button>
-</form>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop mt-section-padding pt-stack-md border-t border-glass-border">
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed-dim text-center">
-                © 2024 Startup Barishal. Empowering the next generation of innovators.
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Home - Startup Barishal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- TopNavBar -->
+    <nav class="navbar">
+      <div class="container navbar-content">
+        <div class="nav-logo">
+          <img
+            alt="Startup Barishal Logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"
+          />
+        </div>
+        <div class="nav-links">
+          <a class="font-label-md active" href="index.html">Home</a>
+          <a class="font-label-md" href="pages/about.html">About</a>
+          <a class="font-label-md" href="pages/resources.html">Resource</a>
+          <a class="font-label-md" href="pages/events-blog.html">Events &amp; Blog</a>
+          <a class="font-label-md" href="pages/incubation.html">Incubation</a>
+        </div>
+        <div class="nav-actions">
+          <button class="font-label-md btn btn-outline">Membership</button>
+          <button class="font-label-md btn btn-primary">Apply Now</button>
+        </div>
+        <button class="nav-toggle">
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 0"
+            >menu</span
+          >
+        </button>
+      </div>
+    </nav>
+    <main class="flex-grow main-content">
+      <!-- Hero Section -->
+      <section class="hero-section container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge font-label-md">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >rocket_launch</span
+              >
+              <span>Incubation Cohorts</span>
+            </div>
+            <h1 class="font-display-lg text-on-background">
+              Accelerate Your Startup Journey
+            </h1>
+            <p class="font-body-lg text-on-surface-variant hero-text">
+              Startup incubation programme to form investor and creators forum
+              and entrepreneurship connection. We provide the resources,
+              mentorship, and network you need to foster your growth.
             </p>
-</div>
-</footer>
-</body></html>
+            <div class="hero-actions">
+              <button class="font-label-md btn btn-lg btn-primary">
+                Start Application
+              </button>
+              <button class="font-label-md btn btn-lg btn-outline">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <div class="hero-image-overlay"></div>
+            <img
+              alt="A team of young diverse entrepreneurs collaborating around a large wooden table in a bright, modern minimalist co-working space."
+              class="hero-image"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT_HAzmMi34jNeme-OGSl-OQxLzNU_GkB5O5Dg_AGEMrwz-WdiGFyYRNbqq6nxWwbVW4SU9eYk-MOqOslPHgSomf7wibXhFkL9p_X1_bMOILJEe9xKa6m37VXNSaPH6eHGYY0PxPEEW1Oq_f0DK44Snx1Giov5LZOl5k0IAv0cvc43JyRGYkIKVO3T4MnkiXC4jzjQNgF0jqFoGH7ioIFegzVppvkO2652bgwBxpq-YzFX_qigsgFrUvKl2irKOFWdxekJxBY7UeQ"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="container stats-grid">
+          <div class="stat-card">
+            <h3 class="font-display-lg text-primary">0+</h3>
+            <p class="font-label-md text-on-surface-variant">
+              Events &amp; Workshop
+            </p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-display-lg text-primary">0+</h3>
+            <p class="font-label-md text-on-surface-variant">
+              Startups Mentored
+            </p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-display-lg text-primary">0+</h3>
+            <p class="font-label-md text-on-surface-variant">
+              Investors Onboarded
+            </p>
+          </div>
+          <div class="stat-card">
+            <h3 class="font-display-lg text-primary">0+</h3>
+            <p class="font-label-md text-on-surface-variant">
+              Cohorts Completed
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Program Offerings (Bento Grid) -->
+      <section class="offerings-section container">
+        <div class="offerings-header">
+          <h2 class="font-headline-md text-on-background">What We Offer</h2>
+          <p class="font-body-lg text-on-surface-variant">
+            Comprehensive support designed for early-stage founders.
+          </p>
+        </div>
+        <div class="bento-grid">
+          <!-- Networking (Large) -->
+          <div class="bento-card bento-card-large">
+            <div class="bento-icon-bg">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >hub</span
+              >
+            </div>
+            <div class="bento-content">
+              <div class="bento-icon-large">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >groups</span
+                >
+              </div>
+              <h3 class="font-headline-sm text-on-background">Networking</h3>
+              <p class="font-body-md text-on-surface-variant bento-text-max">
+                Participate in weekly startup talk sessions and set goals for
+                your company. You will also have productive group sessions every
+                week.
+              </p>
+            </div>
+          </div>
+          <!-- Mentoring -->
+          <div class="bento-card bento-card-regular">
+            <div class="bento-icon-small">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 0"
+                >school</span
+              >
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-on-background bento-title-small">
+                Mentoring
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Learn how to start a startup with startup School courses. Have
+                access to a community of international founders.
+              </p>
+            </div>
+          </div>
+          <!-- Funding -->
+          <div class="bento-card bento-card-regular">
+            <div class="bento-icon-small">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 0"
+                >payments</span
+              >
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-on-background bento-title-small">
+                Funding
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Want to get startup funding but don't know how? Learn how to get
+                funding for your early-stage startup.
+              </p>
+            </div>
+          </div>
+          <!-- Consultation -->
+          <div class="bento-card bento-card-regular">
+            <div class="bento-icon-small">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 0"
+                >support_agent</span
+              >
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-on-background bento-title-small">
+                Consultation
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                We ensure value and nurture for young leadership, creating them
+                today for tomorrow's leader.
+              </p>
+            </div>
+          </div>
+          <!-- Co-Working -->
+          <div class="bento-card bento-card-regular">
+            <div class="bento-icon-small">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 0"
+                >desk</span
+              >
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-on-background bento-title-small">
+                Co-Working
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Join with our amazing network and find passionate entrepreneurs
+                near you to build meaningful connections.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="cta-section container">
+        <div class="cta-box">
+          <div class="cta-decorations">
+            <div class="cta-decor-1"></div>
+            <div class="cta-decor-2"></div>
+          </div>
+          <div class="cta-content">
+            <h2 class="font-display-lg">Ready to Launch?</h2>
+            <p class="font-body-lg cta-text">
+              Join our next incubation cohort and get the resources, mentorship,
+              and network you need to turn your idea into a successful venture.
+            </p>
+            <button class="font-label-md btn-white">
+              Apply for Incubation
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Partners Section -->
+      <section class="partners-section container">
+        <div class="partners-header">
+          <h2 class="font-headline-md text-on-background">Our Partners</h2>
+          <p class="font-body-lg text-on-surface-variant">
+            Supported by local and global leaders.
+          </p>
+        </div>
+        <div class="partners-grid">
+          <div class="partner-logo">Logo 1</div>
+          <div class="partner-logo">Logo 2</div>
+          <div class="partner-logo">Logo 3</div>
+          <div class="partner-logo">Logo 4</div>
+          <div class="partner-logo">Logo 5</div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img
+              alt="Startup Barishal Logo"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKM7aA1POvUUDo89K0PIYsP1A6TD0UwSbnZVLbsxlIBU8uW7QrsCtg-mkJN4GKkgtesuedTOUYB9ubGgY4bfh_B3lDqGA3Iqi0BQaux2QNDVKyIgnbXxlROkJOI0A3wtU_AN69U7UTI9lSUVCBRHdq7b8Df3zlm0JblS4VeQRR1gRk_9TsHcLQnKuTz-HnFzFNTqMh2WsGJug7Vzu16Eq5fzfyYJn6Uj-nuojlzU_dbou12bfIUo3n_V18Eqpuo9FtszUMSZQf4Gk"
+            />
+          </div>
+          <p class="font-body-md text-on-surface-variant">
+            Empowering the next generation of innovators.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-label-md footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="/pages/about.html">About</a>
+            </li>
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="/pages/contact.html"
+                >Contact</a
+              >
+            </li>
+            <li><a class="font-body-md" href="#">Incubation</a></li>
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-label-md footer-title">Legal</h4>
+          <ul class="footer-links">
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="#"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="#"
+                >Cookie Policy</a
+              >
+            </li>
+            <li>
+              <a class="font-body-md text-on-surface-variant" href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="font-label-md footer-title">Newsletter</h4>
+          <p class="font-body-md text-on-surface-variant text-sm">
+            Get weekly updates of our events.
+          </p>
+          <form class="footer-form">
+            <input
+              class="footer-input font-body-md"
+              placeholder="Email *"
+              required=""
+              type="email"
+            />
+            <button class="font-label-md btn-submit" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p class="font-body-md text-on-surface-variant">
+          © 2024 Startup Barishal. Empowering the next generation of innovators.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
