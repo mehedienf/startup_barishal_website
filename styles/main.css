@@ -82,6 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
+
   /* Premium gradient background with subtle mesh/grain feel */
   background:
     radial-gradient(at 0% 0%, rgba(6, 92, 169, 0.05) 0px, transparent 50%),
